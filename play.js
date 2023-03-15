@@ -1,6 +1,6 @@
-const net = require("net");
-const {connect} = require("./client.js")
-
+const { setupInput } = require("./input");
+const {connect} = require("./client")
 
 console.log("Connecting ...");
-connect();
+const conn = connect();
+setupInput(conn);
