@@ -16,6 +16,10 @@ function connect() {
   conn.on('connect', () => {
     console.log('snake initiated');
   });
+  conn.on('connect', (client) => {
+    conn.write('Name: KLK')
+
+  }) 
   conn.on('connect_timeout', () => {
   });
 
