@@ -14,12 +14,10 @@ function connect() {
     console.log('data:', data);
   });
   conn.on('connect', () => {
-    console.log('snake initiated');
-  });
-  conn.on('connect', (client) => {
+    console.log('snake initiated')
     conn.write('Name: KLK')
-
-  }) 
+    //setInterval(()=>{conn.write('Move: up')},500)
+  });
   conn.on('connect_timeout', () => {
   });
 
